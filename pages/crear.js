@@ -1,8 +1,8 @@
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import React, {useState} from 'react'
 
-const crear = () => {
+const Crear = () => {
   const router = useRouter()
   const [user, setUser] = useState({});
   const handleChange = (e) => {
@@ -17,7 +17,7 @@ const crear = () => {
     axios.post('http://localhost:3000/api/user', user)
     .then(resp => {
       console.log(resp.data)
-      router.push('/')
+      router.push('/');
     })
     .catch(error => {
       console.log(error)
@@ -66,4 +66,4 @@ const crear = () => {
   )
 }
 
-export default crear
+export default Crear
