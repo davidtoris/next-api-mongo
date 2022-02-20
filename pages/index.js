@@ -27,7 +27,7 @@ export default function Home({data}) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/user`)
+  const res = await fetch(`https://next-api-mongo.vercel.app/api/user`)
   const data = await res.json()
 
   return {
