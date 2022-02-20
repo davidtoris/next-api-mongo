@@ -14,7 +14,7 @@ const Crear = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:3000/api/user', user)
+    axios.post('https://next-api-mongo.vercel.app/api/user', user)
     .then(resp => {
       console.log(resp.data)
       router.push('/');
